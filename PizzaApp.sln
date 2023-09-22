@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaApp.Server", "PizzaApp.Server\PizzaApp.Server.csproj", "{DA4805A0-3773-43DC-A73E-8DD84DBC0B98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaApp.Data", "PizzaApp.Data\PizzaApp.Data.csproj", "{BB848A01-A2F0-4522-81A6-FCDEA9A992A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaApp.Services", "PizzaApp.Services\PizzaApp.Services.csproj", "{341814BB-8925-42AC-B549-00D2B06D6F0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaApp.Contracts", "PizzaApp.Contracts\PizzaApp.Contracts.csproj", "{C52B9A33-9A81-495C-B49E-5CA6D65FFA52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{DA4805A0-3773-43DC-A73E-8DD84DBC0B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA4805A0-3773-43DC-A73E-8DD84DBC0B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA4805A0-3773-43DC-A73E-8DD84DBC0B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB848A01-A2F0-4522-81A6-FCDEA9A992A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB848A01-A2F0-4522-81A6-FCDEA9A992A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB848A01-A2F0-4522-81A6-FCDEA9A992A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB848A01-A2F0-4522-81A6-FCDEA9A992A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{341814BB-8925-42AC-B549-00D2B06D6F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{341814BB-8925-42AC-B549-00D2B06D6F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{341814BB-8925-42AC-B549-00D2B06D6F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{341814BB-8925-42AC-B549-00D2B06D6F0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C52B9A33-9A81-495C-B49E-5CA6D65FFA52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C52B9A33-9A81-495C-B49E-5CA6D65FFA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C52B9A33-9A81-495C-B49E-5CA6D65FFA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C52B9A33-9A81-495C-B49E-5CA6D65FFA52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

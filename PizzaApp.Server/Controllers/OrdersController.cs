@@ -5,7 +5,6 @@ using PizzaApp.Server.Services;
 
 namespace PizzaApp.Server.Controllers;
 
-[EnableCors("*")]
 [ApiController]
 [Route("[controller]")]
 public class OrdersController : ControllerBase

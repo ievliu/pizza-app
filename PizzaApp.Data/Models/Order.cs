@@ -1,4 +1,4 @@
-using PizzaApp.Contracts;
+using PizzaApp.Data.Dtos;
 
 namespace PizzaApp.Data.Models;
 

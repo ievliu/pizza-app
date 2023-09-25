@@ -1,4 +1,4 @@
-namespace PizzaApp.Contracts;
+namespace PizzaApp.Data.Models;
 
 public enum PizzaSize
 {

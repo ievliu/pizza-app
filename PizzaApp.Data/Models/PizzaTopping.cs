@@ -1,5 +1,3 @@
-using PizzaApp.Contracts;
-
 namespace PizzaApp.Data.Models;
 
 public class PizzaTopping

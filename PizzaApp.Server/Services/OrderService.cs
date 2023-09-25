@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using PizzaApp.Contracts;
 using PizzaApp.Data;
+using PizzaApp.Data.Dtos;
 using PizzaApp.Data.Models;
 
 namespace PizzaApp.Server.Services;
@@ -10,6 +10,7 @@ public interface IOrderService
     Task<OrderDto[]> GetAllAsync();
     Task<OrderDto?> GetByIdAsync(int id);
     Task<OrderDto?> CreateAsync(OrderDto orderDto);
+    decimal CalculateTotal(OrderDto orderDto);
 }
 
 public class OrderService : IOrderService
@@ -56,12 +57,34 @@ public class OrderService : IOrderService
                 PizzaToppingType = p
             }).ToArray(),
             DateCreated = DateTime.UtcNow,
-            Total = orderDto.Total
+            Total = CalculateTotal(orderDto)
         };
 
         _context.Orders.Add(order);
         await _context.SaveChangesAsync();
 
         return order.ToDto();
+    }
+
+    public decimal CalculateTotal(OrderDto orderDto)
+    {
+        _logger.LogInformation("Calculating total");
+
+        var total = orderDto.PizzaSize switch
+        {
+            PizzaSize.Small => 8.00m,
+            PizzaSize.Medium => 10.00m,
+            PizzaSize.Large => 12.00m,
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+        total += orderDto.PizzaToppings.Length;
+
+        if (orderDto.PizzaToppings.Length > 3)
+        {
+            total *= 0.9m;
+        }
+
+        return total;
     }
 }

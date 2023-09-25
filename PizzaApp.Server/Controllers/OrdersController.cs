@@ -1,6 +1,5 @@
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using PizzaApp.Contracts;
+using PizzaApp.Data.Dtos;
 using PizzaApp.Server.Services;
 
 namespace PizzaApp.Server.Controllers;
@@ -43,5 +42,13 @@ public class OrdersController : ControllerBase
         var order = await _orderService.CreateAsync(orderDto);
 
         return CreatedAtAction(nameof(GetById), new { id = order?.Id }, order);
+    }
+    
+    [HttpPost("CalculateTotal")]
+    public ActionResult<decimal> CalculateTotal(OrderDto orderDto)
+    {
+        var total = _orderService.CalculateTotal(orderDto);
+
+        return total;
     }
 }
